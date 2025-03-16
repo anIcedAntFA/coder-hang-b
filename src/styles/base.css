@@ -1,0 +1,142 @@
+:root {
+	/* z-index */
+	--z-index-1: 1;
+	--z-index-2: 2;
+	--z-index-3: 3;
+	--z-index-4: 4;
+	--z-index-5: 5;
+	--z-index-6: 6;
+	--z-index-7: 7;
+	--z-index-8: 8;
+	--z-index-9: 9;
+	--z-index-10: 10;
+
+	/* Font Weight */
+	--fw-normal: 400;
+	--fw-medium: 500;
+	--fw-semibold: 600;
+	--fw-bold: 700;
+	--fw-extrabold: 800;
+
+	/* Colors */
+	--clr-white: #fff;
+	--accent-color: hotpink;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	color: var(--clr-text-primary);
+	font-weight: var(--fw-normal);
+	font-size: var(--fs-18);
+	font-family: "Merriweather Sans", sans-serif;
+	word-break: keep-all;
+
+	background-color: var(--clr-white);
+	scroll-behavior: smooth;
+	font-synthesis: none;
+	text-rendering: optimizelegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	/* remove blue or gray overlay highlight on iOS and Android browsers by default */
+	-webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: Inter, sans-serif;
+}
+
+code {
+	font-family: "JetBrains Mono", monospace;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+input,
+textarea,
+select,
+button {
+	color: inherit;
+	font-size: inherit;
+	font-family: inherit;
+}
+
+button {
+	padding: 0;
+
+	border: none;
+
+	background: transparent;
+
+	outline: none;
+}
+
+/* svg {
+  width: 100%;
+  height: 100%;
+} */
+
+hr {
+	display: block;
+	clear: both;
+
+	height: 0;
+	margin: 0;
+	padding: 0;
+
+	border: none;
+}
+
+::-webkit-scrollbar {
+	width: 4px; /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+	background: transparent; /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 2px;
+
+	background: var(--clr-line-dark); /* color of the scroll thumb */
+	background-clip: padding-box;
+}
+
+/* Remove the search input decoration  */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+	display: none;
+}
+
+/* Remove marker */
+details > summary {
+	list-style: none;
+}
+
+details > summary::marker /* Latest Chrome, Edge, Firefox */,
+details > summary::-webkit-details-marker /* Safari */ {
+	display: none;
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
+
+	min-height: 100vh;
+}

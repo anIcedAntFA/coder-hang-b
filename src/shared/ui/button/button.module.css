@@ -1,0 +1,14 @@
+.btn {
+	padding: 8px 16px;
+
+	font-weight: 500;
+	font-size: 1rem;
+	font-family: inherit;
+
+	border: none;
+	border-radius: 4px;
+
+	cursor: pointer;
+
+	transition: background-color 0.2s, color 0.2s;
+}

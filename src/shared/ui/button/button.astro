@@ -1,0 +1,59 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+import styles from "./button.module.css";
+
+export interface Props extends HTMLAttributes<"button"> {
+	variant?: "contained" | "outlined" | "text";
+	size?: "small" | "medium" | "large";
+}
+
+const { variant, size, ...attrs } = Astro.props;
+---
+
+<button class={styles.btn} data-variant={variant} data-size={size} {...attrs} >
+  <slot />
+</button>
+
+<style>
+  /* button {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+  } */
+
+  button[data-variant="contained"] {
+    background-color: #2563EB;
+    color: white;
+  }
+
+  button[data-variant="outlined"] {
+    background-color: transparent;
+    color: #2563EB;
+    border: 1px solid #2563EB;
+  }
+
+  button[data-variant="text"] {
+    background-color: transparent;
+    color: #2563EB;
+  }
+
+  button[data-size="small"] {
+    font-size: 0.875rem;
+    padding: 6px 12px;
+  }
+
+  button[data-size="large"] {
+    font-size: 1.25rem;
+    padding: 10px 20px;
+  }
+
+  button:hover {
+    filter: brightness(1.1);
+  }
+</style>

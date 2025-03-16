@@ -1,0 +1,14 @@
+.tag {
+	display: flex;
+
+	margin: 0.25em;
+	padding: 20px;
+	padding: .5em 1em;
+
+	font-size: 1.15em;
+
+	border: dotted 1px #a1a1a1;
+	border-radius: .5em;
+
+	background-color: aqua;
+}
